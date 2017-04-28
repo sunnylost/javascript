@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "babel src -w -d build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/sunnylost/javascript/issues"
   },
-  "homepage": "https://github.com/sunnylost/javascript#readme"
+  "homepage": "https://github.com/sunnylost/javascript#readme",
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-preset-env": "^1.4.0"
+  }
 }

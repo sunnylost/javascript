@@ -60,3 +60,6 @@ typings/
 .env
 
 .DS_Store
+
+build/
+tmp/
