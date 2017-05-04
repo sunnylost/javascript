@@ -73,28 +73,33 @@ class Agent {
         }
 
         //repeat
-        //while(1) {
-        //suspend
-        this.executionContextStack.length = 0
-        this.runningExecutionContext      = null
+        while ( 1 ) {
+            //suspend
+            this.executionContextStack.shift()
+            this.runningExecutionContext = null
 
-        Assert( this.executionContextStack.length === 0, 'execution context stack is empty.' )
-        let nextQueue   = this.jobQueues[ SCRIPT_JOBS ], //choose a job queue, implementation defined.
-            nextPending = nextQueue.shift(),
-            newContext  = new ExecutionContext()
+            Assert( this.executionContextStack.length === 0, 'execution context stack is empty.' )
+            let nextQueue   = this.jobQueues[ SCRIPT_JOBS ], //choose a job queue, implementation defined.
+                nextPending = nextQueue.shift(),
+                newContext  = new ExecutionContext()
+debugger
+            if ( !nextPending ) {
+                break //TODO
+            }
 
-        newContext.Function       = null
-        newContext.Realm          = nextPending.__Realm__
-        newContext.ScriptOrModule = nextPending.__ScriptOrModule__
+            newContext.Function       = null
+            newContext.Realm          = nextPending.__Realm__
+            newContext.ScriptOrModule = nextPending.__ScriptOrModule__
 
-        this.executionContextStack.push( newContext )
-        this.runningExecutionContext = newContext
+            this.executionContextStack.push( newContext )
+            this.runningExecutionContext = newContext
 
-        let result = nextPending.__Job__.apply( null, nextPending.__Arguments__ ) //run job
-        if ( result ) { //abrupt completion
-            //HostReportErrors([result.__Value__])
+            let result = nextPending.__Job__.apply( nextPending, nextPending.__Arguments__ ) //run job
+
+            if ( result ) { //abrupt completion
+                //HostReportErrors([result.__Value__])
+            }
         }
-        //}
     }
 
     SetDefaultGlobalBindings() {
