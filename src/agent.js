@@ -82,7 +82,7 @@ class Agent {
             let nextQueue   = this.jobQueues[ SCRIPT_JOBS ], //choose a job queue, implementation defined.
                 nextPending = nextQueue.shift(),
                 newContext  = new ExecutionContext()
-debugger
+            debugger
             if ( !nextPending ) {
                 break //TODO
             }
@@ -102,8 +102,9 @@ debugger
         }
     }
 
-    SetDefaultGlobalBindings() {
-
+    SetDefaultGlobalBindings( realmRec ) {
+        let global = realmRec.__GlobalObject__
+        return global
     }
 }
 
