@@ -1,25 +1,35 @@
 {
-  "name": "javascript",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "dev": "babel src -w -d build",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sunnylost/javascript.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/sunnylost/javascript/issues"
-  },
-  "homepage": "https://github.com/sunnylost/javascript#readme",
-  "devDependencies": {
-    "babel-core": "^6.24.1",
-    "babel-preset-env": "^1.4.0"
-  }
+    "name": "javascript",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "rollup -w -c rollup.config.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sunnylost/javascript.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/sunnylost/javascript/issues"
+    },
+    "homepage": "https://github.com/sunnylost/javascript#readme",
+    "devDependencies": {
+        "@babel/cli": "^7.4.4",
+        "@babel/core": "^7.4.5",
+        "@babel/preset-env": "^7.4.5",
+        "babel-eslint": "^10.0.2",
+        "eslint": "^6.0.1",
+        "eslint-config-prettier": "^6.0.0",
+        "eslint-plugin-prettier": "^3.1.0",
+        "husky": "^2.5.0",
+        "lint-staged": "^8.2.1",
+        "prettier": "^1.17.1",
+        "rollup": "^1.16.2",
+        "rollup-plugin-babel": "^4.3.3"
+    }
 }

@@ -1,13 +1,3 @@
 {
-  "presets": [
-    [
-      "env",
-      {
-        "targets": {
-          "node": "current"
-        },
-        "debug": true
-      }
-    ]
-  ]
+    "presets": [["@babel/env", { "modules": false }]]
 }
