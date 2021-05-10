@@ -19,17 +19,17 @@
     },
     "homepage": "https://github.com/sunnylost/javascript#readme",
     "devDependencies": {
-        "@babel/cli": "^7.4.4",
-        "@babel/core": "^7.4.5",
-        "@babel/preset-env": "^7.4.5",
-        "babel-eslint": "^10.0.2",
-        "eslint": "^6.0.1",
-        "eslint-config-prettier": "^6.0.0",
-        "eslint-plugin-prettier": "^3.1.0",
-        "husky": "^2.5.0",
-        "lint-staged": "^8.2.1",
-        "prettier": "^1.17.1",
-        "rollup": "^1.16.2",
-        "rollup-plugin-babel": "^4.3.3"
+        "@babel/cli": "^7.13.16",
+        "@babel/core": "^7.14.0",
+        "@babel/preset-env": "^7.14.1",
+        "babel-eslint": "^10.1.0",
+        "eslint": "^7.26.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-prettier": "^3.4.0",
+        "husky": "^6.0.0",
+        "lint-staged": "^11.0.0",
+        "prettier": "^2.3.0",
+        "rollup": "^2.47.0",
+        "rollup-plugin-babel": "^4.4.0"
     }
 }
